@@ -1,8 +1,8 @@
 
 
 
-function ProductCard(props, img) {
-    console.log(props.img)
+function ProductCard(props) {
+    
     return ( 
         
     <div className="container  m-2 border p-2" style={{}}>

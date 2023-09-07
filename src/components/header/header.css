@@ -1,7 +1,7 @@
 .logo-title{
     
-    position: fixed;
-    left: 0
+    align-self: left;
+    justify-self: left;
     
 }
 
