@@ -1,0 +1,17 @@
+.menu-container{
+   background-color: rgb(255, 255, 255);
+   margin-top: 9px;
+   margin-left: 2rem;
+   margin-right: 2rem;
+   width: 10%;
+   
+}
+
+.typeProduct{
+    cursor: pointer;
+    
+}
+
+.typeProduct:hover{
+    color: grey;
+}

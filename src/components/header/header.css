@@ -1,0 +1,23 @@
+.logo-title{
+    
+    position: fixed;
+    left: 0
+    
+}
+
+
+.logo-cart{
+    scale: 0.5;
+    
+}
+
+
+.logo-basket{
+    scale: 0.5;
+    
+}
+
+.header{
+    background-color:#ACB3F2;
+    height: 5rem;
+}
