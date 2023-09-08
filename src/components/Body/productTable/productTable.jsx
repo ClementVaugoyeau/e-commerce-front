@@ -13,9 +13,11 @@ function ProductTable(props) {
         .map((product) => (
           <ProductCard
             key={product.id}
+            id={product.id}
             name={product.name}
             price={product.price}
             img={product.img}
+            quantity={product.quantity}
           />
         ))}
     </div>

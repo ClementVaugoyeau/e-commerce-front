@@ -5,6 +5,7 @@ export const productData = [
     category: "fruit",
     price: 1.99,
     img: "../img/apples.png",
+    quantity : 1
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const productData = [
     category: "fruit",
     price: 3.99,
     img: "../img/pears.png",
+    quantity : 1
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const productData = [
     category: "freshProduct",
     price: 4.22,
     img: "../img/comte.png",
+    quantity : 1
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const productData = [
     category: "beverage",
     price: 2.29,
     img: "../img/orange-juice.png",
+    quantity : 1
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ export const productData = [
     category: "freshProduct",
     price: 1.09,
     img: "../img/yogourt.png",
+    quantity : 1
   },
   {
     id: 6,
@@ -40,6 +45,7 @@ export const productData = [
     category: "freshProduct",
     price: 1.09,
     img: "../img/butter.png",
+    quantity : 1
   },
   {
     id: 7,
@@ -47,6 +53,7 @@ export const productData = [
     category: "beverage",
     price: 1.25,
     img: "../img/coca-cola.png",
+    quantity : 1
   },
   {
     id: 8,
@@ -54,6 +61,7 @@ export const productData = [
     category: "vegetable",
     price: 0.99,
     img: "../img/salad.png",
+    quantity : 1
   },
   {
     id: 9,
@@ -61,5 +69,6 @@ export const productData = [
     category: "vegetable",
     price: 1.29,
     img: "../img/radish.png",
+    quantity : 1
   },
 ];

@@ -1,0 +1,8 @@
+.quantity-indicator{
+    width: 20px;
+    height: 40px;
+    align-items: center;
+    background-color: #e5e8eb;
+    vertical-align: middle;
+    text-align: center;
+}
