@@ -1,7 +1,7 @@
 export const productData = [
   {
     id: 1,
-    name: "Pommmes",
+    name: "Pommes",
     category: "fruit",
     price: 1.99,
     img: "../img/apples.png",

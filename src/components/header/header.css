@@ -1,23 +1,36 @@
-.logo-title{
-    
+.logo-title {
+
     align-self: left;
     justify-self: left;
-    
+
 }
 
 
-.logo-cart{
+.logo-cart {
     scale: 0.5;
     
 }
 
-
-.logo-basket{
-    scale: 0.5;
-    
+.logo-cart:hover{
+    filter: opacity(0.5);
 }
 
-.header{
-    background-color:#ACB3F2;
+
+
+.logo-basket {
+    scale: 0.5;
+}
+
+
+
+.header {
+    background-color: #ACB3F2;
     height: 5rem;
+    
+}
+
+.panier-container:hover{
+    color: grey;
+    filter: opacity(0.5)
+    
 }
