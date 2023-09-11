@@ -33,16 +33,44 @@ export const basketSlice = createSlice({
       }
     },
     removeItemFromBasket: (state, action) => {
-      state.items = state.items.filter((item) => item.id !== action.payload.id);
+      const inCartItems = state.items.filter(
+        (item) => item.id !== action.payload.id
+      );
+
+      state.items = inCartItems;
+      // localStorage.setItem("items", JSON.stringify(inCartItems));
     },
-    increaseItemQuantityFromBasket: (state, action) => {
-      console.log('increase');
-      // state.items[existingCartItemIndex].quantity += 1;
+    increaseItemQuantity: (state, action) => {
+      const existingCartItemIndex = state.items.findIndex(
+        (item) => item.id === action.payload.id
+      );
+
+      state.items[existingCartItemIndex].quantity += 1;
+    },
+    decreaseItemQuantity: (state, action) => {
+      const existingCartItemIndex = state.items.findIndex(
+        (item) => item.id === action.payload.id
+      );
+
+      if (state.items[existingCartItemIndex].quantity < 2) {
+        const inCartItems = state.items.filter(
+          (item) => item.id !== action.payload.id
+        );
+
+        state.items = inCartItems;
+      } else {
+        state.items[existingCartItemIndex].quantity -= 1;
+      }
     },
   },
 });
 
-export const { addItemToBasket, removeItemFromBasket, increaseItemQuantityFromBasket } = basketSlice.actions;
+export const {
+  addItemToBasket,
+  removeItemFromBasket,
+  increaseItemQuantity,
+  decreaseItemQuantity,
+} = basketSlice.actions;
 
 export const selectItems = (state) => state.basket.items;
 

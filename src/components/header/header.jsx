@@ -5,11 +5,14 @@ import shoppingBasketIcon from './icon-panier.png'
 import userIcon from './icon-user.png'
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux'
+import { getTotal } from "../../app/features/functions/calculatingFunctions";
 
 
 function Header() {
 
-  const numberProductInBasket = useSelector((state) => (state.basket.items.length));
+  const productsBasket = useSelector((state) => (state.basket.items)); 
+
+  
     
   return (
       
@@ -31,7 +34,7 @@ function Header() {
             alt="icone de panier"
             placeholder=" Rechercher..."
           />{" "}
-          <button className="mt-6 mb-6 bg-indigo-600 text-white px-6  font-semibold rounded-r-md">Search</button>
+          <button className="mt-6 mb-6 bg-indigo-600 text-white px-6  font-semibold rounded-r-md">Q</button>
         </div>
 
         <div className="panier-container flex" alt="icone d'utilisateur">
@@ -43,13 +46,17 @@ function Header() {
           
            
           <div className="imageBox-cart relative -mr-4">
-            {numberProductInBasket > 0 ? 
+            {getTotal(productsBasket).totalQuantity > 0 ? 
           <div className="badge-basket absolute  rounded-full bg-red-600 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center">
-              {numberProductInBasket}
+              {getTotal(productsBasket).totalQuantity}
             </div> : null}
           <img className="logo-basket -mr-4" src={shoppingBasketIcon} />
           </div>
-          <p className="panier-title  mt-8">Panier</p>
+          {getTotal(productsBasket).sousTotal > 0 ? 
+          <div className="panier-title  mt-8">
+              {getTotal(productsBasket).sousTotal} €
+            </div> : <p className="panier-title  mt-8">Panier</p>}
+          
         </Link>
       </nav>
     );

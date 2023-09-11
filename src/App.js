@@ -1,9 +1,9 @@
 import './App.css';
 import Header from './components/header/header';
 import ParentTable from './components/Body/BodyTable/ParentTable';
-import Basket from './components/Basket/Basket';
 import {Routes, Route} from 'react-router-dom'
 import ProductDetails from './components/ProductDetails/ProductDetail';
+import BasketTable from './components/BasketTable/BasketTable';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         < Route path='/' element={<ParentTable/>} />
-        < Route path='/cart' element={<Basket/>} />
+        < Route path='/cart' element={<BasketTable/>} />
         <Route path='/productDetail/:id' element={<ProductDetails/>}/>
       </Routes>
    
