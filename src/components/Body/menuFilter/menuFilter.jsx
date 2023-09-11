@@ -14,11 +14,11 @@ function MenuFilter({ selectCategory }) {
     return ( 
         <div className="menu-container flex flex-col" >
             <h3 className='menuTitle mb-2 font-bold'>Trier par produit</h3>
-            <button className='typeProduct' name='all' onClick={e => changeCategory(e)}>Tous les produits</button>
-             <button className='typeProduct' name='fruit' onClick={e => changeCategory(e)}>Fruits</button>
-             <button className='typeProduct' name='vegetable'onClick={changeCategory}>Légumes</button>
-             <button className='typeProduct' name='freshProduct'onClick={changeCategory}>Produits Frais</button>
-             <button className='typeProduct' name='beverage'onClick={changeCategory}>Boissons</button>
+             <button className='typeProduct text-left' name='all' onClick={e => changeCategory(e)}>Tous les produits</button>
+             <button className='typeProduct text-left' name='fruit' onClick={e => changeCategory(e)}>Fruits</button>
+             <button className='typeProduct text-left' name='vegetable'onClick={changeCategory}>Légumes</button>
+             <button className='typeProduct text-left' name='freshProduct'onClick={changeCategory}>Produits Frais</button>
+             <button className='typeProduct text-left' name='beverage'onClick={changeCategory}>Boissons</button>
         </div>
      );
 }

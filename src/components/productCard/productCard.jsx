@@ -17,8 +17,8 @@ function ProductCard(props) {
         <div className="productInfo grid grid-cols-2 gap-2">
             <div className="nameProduct">{props.name}</div>
             <div className="priceProduct">{props.price} €</div>
-            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Voir Produit</button>
-            <button onClick={() => dispatch(addItemToBasket(props))} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Ajouter</button>
+            <button className='bg-indigo-600 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded'>Voir Produit</button>
+            <button onClick={() => dispatch(addItemToBasket(props))} className='bg-indigo-600 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded'>Ajouter</button>
        </div>
     
     </div> );

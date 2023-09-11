@@ -11,14 +11,18 @@
     
 }
 
+.logo-search{
+    filter: invert(1);
+    scale:0.4
+}
+
 .logo-cart:hover{
     filter: opacity(0.5);
 }
 
-
-
 .logo-basket {
     scale: 0.5;
+    z-index: 10;
 }
 
 
