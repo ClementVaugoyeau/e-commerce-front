@@ -31,6 +31,8 @@ export const basketSlice = createSlice({
           },
         ];
       }
+
+     
     },
     removeItemFromBasket: (state, action) => {
       const inCartItems = state.items.filter(
@@ -62,6 +64,15 @@ export const basketSlice = createSlice({
         state.items[existingCartItemIndex].quantity -= 1;
       }
     },
+    getItemQuantity: (state, action) => {
+      const existingCartItemIndex = state.items.findIndex(
+        (item) => item.id === action.payload.id
+      );
+
+     return state.items[existingCartItemIndex].quantity 
+       
+      
+    },
   },
 });
 
@@ -70,6 +81,7 @@ export const {
   removeItemFromBasket,
   increaseItemQuantity,
   decreaseItemQuantity,
+  getItemQuantity
 } = basketSlice.actions;
 
 export const selectItems = (state) => state.basket.items;

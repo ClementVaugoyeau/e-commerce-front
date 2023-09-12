@@ -43,10 +43,10 @@ function Header() {
          
         </div>
         
-        <div className="panier-container flex" alt="icone d'utilisateur">
+        <Link to="/my-account" className="panier-container flex" alt="icone d'utilisateur">
           <img className="logo-basket -mr-4" src={userIcon} />
           <p className="panier mt-10">Compte</p>
-        </div>
+        </Link>
 
         <Link to="/cart" className="panier-container flex mr-4">
           

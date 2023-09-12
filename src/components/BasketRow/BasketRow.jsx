@@ -1,13 +1,14 @@
 import './BasketRow.css';
 import { increaseItemQuantity, decreaseItemQuantity, removeItemFromBasket} from '../../app/features/basketSlice';
 import { useDispatch } from 'react-redux'
+import ButtonQuantity from '../ButtonQuantity/ButtonQuantity';
 
 const BasketRow = ({product}) => {
 
     const dispatch = useDispatch()
     
     const {name, price, category, img, quantity, id} = product
-    // console.log(product)
+
 
     let totalOneProduct = (price * quantity).toFixed(2)
     
@@ -24,20 +25,9 @@ const BasketRow = ({product}) => {
 
             <td >
                 
-                <div className='flex justify-center'>
-            <button
-                onClick={() => dispatch(decreaseItemQuantity(product))}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
-                -
-              </button>
-              <p className="quantity-indicator pt-2">{quantity}</p>
-              <button
-                onClick={() => dispatch(increaseItemQuantity(product))}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
-                +
-              </button>
-              </div>
-             
+               <ButtonQuantity product={product} quantity={quantity}/>
+               
+               
             </td>
 
             <td>{totalOneProduct} €</td>

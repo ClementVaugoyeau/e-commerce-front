@@ -1,7 +1,17 @@
-function ProductDetails() {
-    return ( <div>
-        <h1>Produit</h1>
-    </div> );
-}
+import { productData } from "../../data";
+import { useParams } from "react-router-dom";
+import ProductCard from "../productCard/productCard";
 
-export default ProductDetails;
+const ProductsDetails = () => {
+  const { id } = useParams();
+
+  const product = productData.find((prod) => prod.id == id);
+
+  return (
+    <div>
+      <ProductCard product={product} />
+    </div>
+  );
+};
+
+export default ProductsDetails;
