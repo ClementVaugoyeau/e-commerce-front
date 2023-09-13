@@ -3,7 +3,7 @@ import React from "react";
 import { Formik } from "formik";
 import { Link } from "react-router-dom";
 
-const MenuSignUp = () => {
+const MenuSignUp = ({page}) => {
   return (
     
       <div className="sm:mx-auto sm:w-fullbg-indigo-600 sm:max-w-sm">
@@ -19,7 +19,7 @@ const MenuSignUp = () => {
           <ul className="flex flex-wrap -mb-px">
             <Link to={"/my-account"}>
               <li className="mr-2">
-                <div className="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">
+                <div className={`inline-block p-4 ${ page ? 'text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500' : 'page border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'} `}>
                   Connexion
                 </div>
               </li>
@@ -27,7 +27,7 @@ const MenuSignUp = () => {
             <Link to={"/my-account/sign-up"}>
               <li className="mr-2">
                 <div
-                  className="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500"
+                  className={`inline-block p-4 ${ page ? 'page border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300' : 'text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500'} `}
                   aria-current="page">
                   Inscription
                 </div>

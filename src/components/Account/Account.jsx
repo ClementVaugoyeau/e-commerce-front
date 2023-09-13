@@ -6,9 +6,12 @@ import SignUp from "../SignUp/SignUp";
 import MenuSignUp from "../MenuSignUp/MenuSignUp";
 
 const Account = () => {
+  
+  const account = true
+
   return (
     <div className="flex min-h-full flex-col  justify-center px-6 py-12 lg:px-8">
-      <MenuSignUp/>
+      <MenuSignUp page={account} />
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <Formik>

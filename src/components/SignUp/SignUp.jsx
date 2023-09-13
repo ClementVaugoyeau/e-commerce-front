@@ -9,6 +9,8 @@ import { TextFiled } from "./TextFiled";
 
 const SignUp = () => {
 
+  const account = false
+
     const validate = object(
       {
         firstName: string().max(15, "Ne doit pas depasser 15 caractères").required("Prénom Requis"),
@@ -20,7 +22,7 @@ const SignUp = () => {
     )
   return (
     <div className="flex min-h-full flex-col  justify-center px-6 py-12 lg:px-8">
-    <MenuSignUp/>
+    <MenuSignUp page={account}/>
 
     <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
     <Formik
